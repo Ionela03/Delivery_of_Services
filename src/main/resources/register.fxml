@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="615.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="251.0" style="-fx-background-color: #DC8B33;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="195.0" layoutX="43.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@com/images/img2.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="15.0" layoutY="14.0" prefHeight="58.0" prefWidth="223.0" text="Delivery of Services">
+                    <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="70.0" layoutY="72.0" prefHeight="17.0" prefWidth="112.0" text="Registration">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="13.0" layoutY="63.0" prefHeight="27.0" prefWidth="104.0" text="Email adress">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="31.0" layoutY="109.0" prefHeight="27.0" prefWidth="88.0" text="Password">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="9.0" layoutY="155.0" prefHeight="27.0" prefWidth="151.0" text="Confirm Password">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #FFD700;" text="Registration">
+                    <effect>
+                        <InnerShadow>
+                            <color>
+                                <Color red="0.19736842811107635" green="0.19736842811107635" blue="0.19736842811107635" />
+                            </color>
+                        </InnerShadow>
+                    </effect>
+                </Button>
+                <TextField layoutX="113.0" layoutY="64.0" prefHeight="25.0" prefWidth="238.0" promptText="Email adress">
+                    <effect>
+                        <InnerShadow />
+                    </effect></TextField>
+                <PasswordField layoutX="115.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" promptText="Password">
+                    <effect>
+                        <InnerShadow />
+                    </effect></PasswordField>
+                <PasswordField layoutX="156.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" promptText="Confirm Password">
+                    <effect>
+                        <InnerShadow />
+                    </effect></PasswordField>
+                <Label layoutX="23.0" layoutY="23.0" prefHeight="17.0" prefWidth="105.0" text="Username">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField layoutX="114.0" layoutY="24.0" prefHeight="25.0" prefWidth="236.0" promptText="Username">
+                    <effect>
+                        <InnerShadow />
+                    </effect></TextField>
+                <Button layoutX="59.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="237.0" text="Go back to Log in">
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </Button>
+                <MenuButton layoutX="114.0" layoutY="216.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #FFD700;" text="Role" textAlignment="RIGHT">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Customer" />
+                        <MenuItem mnemonicParsing="false" text="Provider" />
+                    </items>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </MenuButton>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

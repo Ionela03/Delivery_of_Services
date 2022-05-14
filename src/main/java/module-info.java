@@ -10,6 +10,7 @@ module com.example.delivery_of_services_application {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires nitrite;
 
     opens com.example.delivery_of_services_application to javafx.fxml;
     exports com.example.delivery_of_services_application;

@@ -9,12 +9,12 @@ import java.io.IOException;
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaystage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("log_in.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Delivery of Services App");
-        stage.setScene(scene);
-        stage.show();
+        Scene scene = new Scene(fxmlLoader.load(), 660, 490);
+        primaystage.setTitle("Delivery of Services App");
+        primaystage.setScene(scene);
+        primaystage.show();
     }
 
     public static void main(String[] args) {

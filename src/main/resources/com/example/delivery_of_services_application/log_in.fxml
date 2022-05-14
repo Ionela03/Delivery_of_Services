@@ -7,9 +7,15 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="615.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="615.0"
+            style="-fx-background-color: #FCF3CF;"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.delivery_of_services_application.controllers.LoginController"
+>
    <children>
-      <Button alignment="CENTER" layoutX="346.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Login" textFill="#212222">
+      <Button fx:id="loginButton" alignment="CENTER" layoutX="346.0" layoutY="263.0" mnemonicParsing="false"   onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Login" textFill="#212222">
          <effect>
             <InnerShadow>
                <color>
@@ -35,10 +41,10 @@
          </effect>
       </PasswordField>
       <MenuButton alignment="CENTER" contentDisplay="RIGHT" layoutX="346.0" layoutY="212.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="30.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Role" textAlignment="CENTER" textFill="#0a0a0a" underline="true">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Customer" />
-          <MenuItem mnemonicParsing="false" text="Provider" />
-        </items>
+         <items>
+            <MenuItem mnemonicParsing="false" text="Customer" />
+            <MenuItem mnemonicParsing="false" text="Provider" />
+         </items>
          <font>
             <Font size="14.0" />
          </font>
@@ -66,7 +72,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Button layoutX="423.0" layoutY="348.0" mnemonicParsing="false" style="-fx-background-color: #FFD700;" text="Cancel" textFill="RED">
+      <Button fx:id="cancelButton" layoutX="423.0" layoutY="348.0" mnemonicParsing="false"  onAction="#cancelButtonOnAction" style="-fx-background-color: #FFD700;" text="Cancel" textFill="RED">
          <effect>
             <InnerShadow>
                <color>
@@ -74,7 +80,8 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Button layoutX="346.0" layoutY="303.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Registration" textFill="#171717">
+      <Button  fx:id="registrationButton" layoutX="346.0" layoutY="303.0" mnemonicParsing="false" onAction="#registrationButtonOnAction" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Registration" textFill="#171717">
+
          <effect>
             <InnerShadow>
                <color>
@@ -96,14 +103,14 @@
             <DropShadow />
          </effect>
          <children>
-             <ImageView fitHeight="194.0" fitWidth="206.0" layoutX="18.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
-                 <image>
-                     <Image url="@../../images/img2.jpg" />
-                 </image>
+            <ImageView fitHeight="194.0" fitWidth="206.0" layoutX="18.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/img2.jpg" />
+               </image>
                <effect>
                   <DropShadow />
                </effect>
-             </ImageView>
+            </ImageView>
             <Label layoutX="18.0" layoutY="26.0" prefHeight="90.0" prefWidth="234.0" text="Delivery of Services" textFill="#dce619">
                <font>
                   <Font name="System Bold Italic" size="24.0" />
