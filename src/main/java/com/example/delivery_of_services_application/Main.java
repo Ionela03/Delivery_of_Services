@@ -2,22 +2,35 @@ package com.example.delivery_of_services_application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.example.delivery_of_services_application.services.FileSystemService;
+import com.example.delivery_of_services_application.services.UserService;
 
-import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main extends Application {
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("log_in.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Delivery of Services App");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws Exception {
+        initDirectory();
+        UserService.initDatabase();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("log_in.fxml"));
+        primaryStage.setTitle("Delivery of Services App");
+        primaryStage.setScene(new Scene(root, 600, 451));
+        primaryStage.show();
     }
 
+    private void initDirectory() {
+        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
+        if (!Files.exists(applicationHomePath))
+            applicationHomePath.toFile().mkdirs();
+    }
+
+
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
