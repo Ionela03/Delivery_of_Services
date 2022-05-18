@@ -66,7 +66,7 @@ public class LoginController {
                         Stage stage;
                         Parent root;
                         stage = (Stage) loginButton.getScene().getWindow();
-                        root=FXMLLoader.load(getClass().getClassLoader().getResource(" CustomerHomePage.fxml"));
+                        root=FXMLLoader.load(getClass().getClassLoader().getResource("CustomerHomePage.fxml"));
                         stage.setScene(new Scene(root, 1127, 680));
                         stage.show();
                     }
