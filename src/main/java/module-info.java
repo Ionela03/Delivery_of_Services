@@ -1,4 +1,5 @@
-module com.example.delivery_of_services_application {
+
+    module com.example.delivery_of_services_application {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -15,5 +16,7 @@ module com.example.delivery_of_services_application {
     opens com.example.delivery_of_services_application to javafx.fxml;
     exports com.example.delivery_of_services_application;
     exports com.example.delivery_of_services_application.controllers;
+    exports com.example.delivery_of_services_application.users;
     opens com.example.delivery_of_services_application.controllers to javafx.fxml;
 }
+
