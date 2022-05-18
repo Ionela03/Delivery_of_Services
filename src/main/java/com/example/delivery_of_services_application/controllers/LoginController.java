@@ -1,58 +1,93 @@
 package com.example.delivery_of_services_application.controllers;
 
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.controlsfx.control.action.Action;
+import javafx.event.ActionEvent;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Objects;
+
+import com.example.delivery_of_services_application.services.UserService;
+import com.example.delivery_of_services_application.users.User;
+
+
 
 public class LoginController {
-    @FXML
-    private MenuButton roleButton;
-    @FXML
-    private Button loginButton;
-    @FXML
-    private Button registrationButton;
+
     @FXML
     private Button cancelButton;
     @FXML
-    private AnchorPane openregisterpane;
+    private Label loginMessageLabel;
     @FXML
-    private Stage stage;
+    private TextField usernameTextField;
     @FXML
-    private Scene scene;
+    private PasswordField passwordField;
     @FXML
-    private Parent root;
+    private Button registerButton;
+    @FXML
+    private Button loginButton;
+    @FXML
+    public void loginButtonOnAction(ActionEvent event) throws IOException{
 
-    public void loginButtonOnAction() {
-        System.out.println("Login");
-    }
+            String username=usernameTextField.getText();
+            String password=passwordField.getText();
+            if(username!=null && password!=null){
+                int k;
+                k= UserService.validateLogin(username,password);
+                if(k!=0)
+                {
+                    if(k==1){
+                        //open interface for Provider
+                        Stage stage;
+                        Parent root;
+                        stage = (Stage) loginButton.getScene().getWindow();
+                        root=FXMLLoader.load(getClass().getClassLoader().getResource("ProviderHomePage.fxml"));
+                        stage.setScene(new Scene(root, 1127, 680));
+                        stage.show();
+                    }
+                    if(k==2){
+                        //open interface for Customers
+                        Stage stage;
+                        Parent root;
+                        stage = (Stage) loginButton.getScene().getWindow();
+                        root=FXMLLoader.load(getClass().getClassLoader().getResource(" CustomerHomePage.fxml"));
+                        stage.setScene(new Scene(root, 1127, 680));
+                        stage.show();
+                    }
 
-    public void cancelButtonOnAction() {
-        System.out.println("cancel");
+                }
+                else{
+                    loginMessageLabel.setText("Please try again!");
+                }
+            }
+            else{
+
+                loginMessageLabel.setText("Please enter your username and password!");
+            }
+        }
+
+
+    @FXML
+    public void cancelButtonOnAction(ActionEvent event){
         Stage stage=(Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 
-    public void registrationButtonOnAction(ActionEvent event) throws  IOException{
+    @FXML
+    public void registrationButtonOnAction(ActionEvent event) throws IOException {
+        Stage stage;
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
         stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
+        Scene scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
+
 }

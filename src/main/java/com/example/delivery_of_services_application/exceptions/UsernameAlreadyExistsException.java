@@ -1,4 +1,4 @@
-package exceptions;
+package com.example.delivery_of_services_application.exceptions;
 
 public class UsernameAlreadyExistsException extends Throwable {
     private String username;

@@ -1,18 +1,16 @@
 package com.example.delivery_of_services_application.services;
 
-
-import com.example.delivery_of_services_application.users.User;
-import exceptions.UsernameAlreadyExistsException;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import com.example.delivery_of_services_application.exceptions.UsernameAlreadyExistsException;
+import com.example.delivery_of_services_application.users.User;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 
-import static com.example.delivery_of_services_application.services.FileSystem.getPathToFile;
-import static com.example.delivery_of_services_application.services.FileSystem.getPathToFile;
+import static com.example.delivery_of_services_application.services.FileSystemService.getPathToFile;
 
 public class UserService {
 
@@ -20,9 +18,8 @@ public class UserService {
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("delivery_of_services_application.db").toFile())
+                .filePath(getPathToFile("DSA.db").toFile())
                 .openOrCreate("test", "test");
-
         userRepository = database.getRepository(User.class);
     }
 
@@ -33,11 +30,27 @@ public class UserService {
 
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
-            if (Objects.equals(username, user.getUsername()))
+            if (Objects.equals(username, user.username))
                 throw new UsernameAlreadyExistsException(username);
         }
     }
+    public static int validateLogin(String username, String password) {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.username)) {
+                String pass = encodePassword(username, password);
+                if (Objects.equals(user.password, pass)) {
+                    if (Objects.equals(user.role, "Provider")) {
+                        return 1;
+                    }
+                    if (Objects.equals(user.role, "Customer")) {
+                        return 2;
+                    }
+                }
+            }
+        }
+        return 0;
 
+    }
     private static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
@@ -58,5 +71,6 @@ public class UserService {
         }
         return md;
     }
+
 
 }
