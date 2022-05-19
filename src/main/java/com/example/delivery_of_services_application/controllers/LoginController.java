@@ -36,12 +36,7 @@ public class LoginController {
     private AnchorPane openClientInterface;
     @FXML
     private AnchorPane openInstructorInterface;
-    @FXML
-    private ChoiceBox nextTo;
 
-    public void initialize(){
-        nextTo.getItems().addAll("Customer","Provider");
-    }
     @FXML
     public void loginButtonOnAction(ActionEvent event) throws IOException{
 
