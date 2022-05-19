@@ -7,9 +7,13 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="615.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="451.0" prefWidth="615.0"
+            style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.delivery_of_services_application.controllers.LoginController">
    <children>
-      <Button fx:id="loginButton" alignment="CENTER" layoutX="341.0" layoutY="267.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Login" textFill="#212222">
+      <Button fx:id="loginButton" alignment="CENTER" layoutX="354.0" layoutY="225.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Login" textFill="#212222">
          <effect>
             <InnerShadow>
                <color>
@@ -50,7 +54,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Button fx:id="cancelButton" layoutX="418.0" layoutY="400.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #FFD700;" text="Cancel" textFill="RED">
+      <Button fx:id="cancelButton" layoutX="431.0" layoutY="398.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #FFD700;" text="Cancel" textFill="RED">
          <effect>
             <InnerShadow>
                <color>
@@ -58,7 +62,7 @@
                </color>
             </InnerShadow>
          </effect></Button>
-      <Button fx:id="registrationButton" layoutX="346.0" layoutY="345.0" mnemonicParsing="false" onAction="#registrationButtonOnAction" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Registration" textFill="#171717">
+      <Button fx:id="registrationButton" layoutX="354.0" layoutY="332.0" mnemonicParsing="false" onAction="#registrationButtonOnAction" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #FFD700;" text="Registration" textFill="#171717">
 
          <effect>
             <InnerShadow>
@@ -99,7 +103,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Text layoutX="300.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You don't have an account? Register now!" wrappingWidth="268.13671875">
+      <Text layoutX="323.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You don't have an account? Register now!" wrappingWidth="268.13671875">
          <font>
             <Font size="14.0" />
          </font>
@@ -108,7 +112,6 @@
          </effect>
       </Text>
       <Label fx:id="loginMessageLabel" layoutX="308.0" layoutY="209.0" prefHeight="17.0" prefWidth="252.0" />
-      <ChoiceBox fx:id="nextTo" layoutX="383.0" layoutY="214.0" prefWidth="150.0" />
 
    </children>
    <effect>
