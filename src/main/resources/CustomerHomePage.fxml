@@ -7,31 +7,31 @@
 <?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.CustomerHomePageController">
-    <left>
-        <AnchorPane prefHeight="490.0" prefWidth="156.0" style="-fx-background-color: #0B4C6C;" BorderPane.alignment="CENTER">
-            <children>
-                <ImageView fitHeight="131.0" fitWidth="125.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@images/homeC.png" />
-                    </image>
-                </ImageView>
-                <Button layoutX="17.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Profile">
+   <left>
+      <AnchorPane prefHeight="490.0" prefWidth="156.0" style="-fx-background-color: #0B4C6C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="131.0" fitWidth="125.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/homeC.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="17.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Profile">
                <effect>
                   <InnerShadow />
                </effect></Button>
-                <Button layoutX="17.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="History">
+            <Button layoutX="17.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="History">
                <effect>
                   <InnerShadow />
                </effect></Button>
-                <Button layoutX="16.0" layoutY="332.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="121.0" text="Log Out">
+            <Button layoutX="16.0" layoutY="332.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="121.0" text="Log Out">
                <effect>
                   <InnerShadow />
                </effect></Button>
-            </children>
-        </AnchorPane>
-    </left>
-    <right>
-        <AnchorPane prefHeight="490.0" prefWidth="144.0" style="-fx-background-color: #A1BEBF;" BorderPane.alignment="CENTER">
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="490.0" prefWidth="144.0" style="-fx-background-color: #A1BEBF;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="13.0" layoutY="24.0" mnemonicParsing="false" onAction="#cleaningButtonOnAction" prefHeight="51.0" prefWidth="120.0" text="Cleaning">
                <font>
@@ -70,8 +70,8 @@
                   <Font name="System Italic" size="12.0" />
                </font></Button>
          </children>
-        </AnchorPane>
-    </right>
+      </AnchorPane>
+   </right>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
