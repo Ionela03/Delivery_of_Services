@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.AddAnnouncementController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="600.0" prefWidth="283.0" style="-fx-background-color: #EAA568;">
+         <children>
+            <Button fx:id="backButton" layoutX="38.0" layoutY="505.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="181.0" text="Back">
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.09868421405553818" green="0.5921052694320679" blue="0.12335526198148727" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Button fx:id="logOutButton" layoutX="38.0" layoutY="453.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="181.0" text="LogOut">
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.9342105388641357" green="0.11245127022266388" blue="0.11245127022266388" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="4.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/announcementImage.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="731.0" layoutY="1.0" prefHeight="600.0" prefWidth="269.0" style="-fx-background-color: #F9E9C9;">
+         <children>
+            <Button fx:id="addButton" layoutX="28.0" layoutY="365.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #71CBF2;" text="Add">
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.053281351923942566" green="0.01949317753314972" blue="0.5263158082962036" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="82.0" prefHeight="98.0" prefWidth="256.0" text="Add Your announcement here">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ChoiceBox fx:id="domain" layoutX="472.0" layoutY="135.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.8899999856948853" green="0.5943928360939026" blue="0.062300000339746475" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <Label layoutX="343.0" layoutY="134.0" text="Domain">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="299.0" layoutY="286.0" prefHeight="28.0" prefWidth="166.0" text="Negociable Price">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="306.0" layoutY="227.0" prefHeight="17.0" prefWidth="150.0" text="Price">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="315.0" layoutY="413.0" prefHeight="28.0" prefWidth="133.0" text="Descriprition">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="deplHome" layoutX="480.0" layoutY="175.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #F9E9C9;">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.8552631735801697" green="0.4983755648136139" blue="0.031676411628723145" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <TextField fx:id="price" layoutX="471.0" layoutY="227.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex: 100 Ron" />
+      <Label layoutX="325.0" layoutY="99.0" text="County-Town">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="description" layoutX="449.0" layoutY="394.0" prefHeight="118.0" prefWidth="221.0" promptText="Ex: I can make your websites" />
+      <Label alignment="CENTER" layoutX="307.0" layoutY="338.0" prefHeight="17.0" prefWidth="150.0" text="Phone">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phone" layoutX="472.0" layoutY="338.0" prefHeight="28.0" prefWidth="195.0" promptText="07..." />
+      <Label layoutX="299.0" layoutY="175.0" prefHeight="28.0" prefWidth="181.0" text="Displacement Home">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="negociableprice" layoutX="471.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.8947368264198303" green="0.4487491846084595" blue="0.19054581224918365" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <Label layoutX="302.0" layoutY="50.0" text="No Announcement">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="noAnnouncement" layoutX="477.0" layoutY="50.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex 001" />
+      <Text fill="#da0f0f" layoutX="315.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="369.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="county" layoutX="471.0" layoutY="92.0" prefHeight="28.0" prefWidth="195.0" promptText="Olt-Slatina" />
+   </children>
+</AnchorPane>
