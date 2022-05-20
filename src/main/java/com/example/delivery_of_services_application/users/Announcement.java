@@ -2,14 +2,14 @@ package com.example.delivery_of_services_application.users;
 
 public class Announcement {
 
-    private String noAnnouncement;
-    private String county;
-    private String domain;
-    private String deplHome;
-    private String price;
-    private String negociablePrice;
-    private String phone;
-    private String description;
+    public String noAnnouncement;
+    public String county;
+    public String domain;
+    public String deplHome;
+    public String price;
+    public String negociablePrice;
+    public String phone;
+    public String description;
 
 
     public Announcement(String noAnnouncement, String county, String domain, String deplHome, String price, String negociablePrice, String phone, String description) {
@@ -24,6 +24,9 @@ public class Announcement {
         this.description = description;
     }
 
+    public Announcement(){
+
+    }
     public String getNoAnnouncement() {
         return noAnnouncement;
     }
@@ -58,8 +61,9 @@ public class Announcement {
 
     @Override
     public boolean equals(Object o) {
-        if (o instanceof Announcement)
-            return (((Announcement) o).getNoAnnouncement().equals(noAnnouncement));
-        else return false;
+        if(o instanceof Announcement)
+            return(((Announcement)o).noAnnouncement.equals(noAnnouncement));
+        else
+            return false;
     }
 }
