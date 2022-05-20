@@ -13,7 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
+import javafx.scene.text.Text;
+
 
 import java.io.IOException;
 
@@ -38,18 +39,11 @@ public class AddAnnouncementController {
     private Text addMessage;
 
 
+
     @FXML
-    public void initializeDomain() {
+    public void initialize() {
         domain.getItems().addAll("Cleaning", "Renovation Work", "Medical Services", "IT Support","Others");
-    }
-
-    @FXML
-    public void initializeDeplHome() {
         deplHome.getItems().addAll("Yes", "No");
-    }
-
-    @FXML
-    public void initializeNegociablePrice() {
         negociablePrice.getItems().addAll("Yes", "No");
     }
     @FXML
@@ -77,9 +71,9 @@ public class AddAnnouncementController {
 
             try {
                 AnnouncementService.addAnnouncement(noAnnouncement.getText(), county.getText(), (String)domain.getValue(), (String)deplHome.getValue(),price.getText(),(String)negociablePrice.getValue(), phone.getText(),description.getText());
-                addMessage.setTextContent("Announcement added successfully!");
+                addMessage.setText("Announcement added successfully!");
             } catch (AnnouncementAlreadyExistsException e) {
-                throw new RuntimeException(e);
+                addMessage.setText(e.getMessage());
             }
     }
 
