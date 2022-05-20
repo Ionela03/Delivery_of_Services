@@ -52,6 +52,11 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
+            <Text fx:id="addMessage" fill="#da0f0f" layoutX="7.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="256.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <ChoiceBox fx:id="domain" layoutX="472.0" layoutY="135.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
@@ -110,7 +115,7 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="negociableprice" layoutX="471.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
+      <ChoiceBox fx:id="negociablePrice" layoutX="471.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
          <effect>
             <InnerShadow>
                <color>
@@ -125,11 +130,6 @@
          </font>
       </Label>
       <TextField fx:id="noAnnouncement" layoutX="477.0" layoutY="50.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex 001" />
-      <Text fill="#da0f0f" layoutX="315.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="369.13671875">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
       <TextField fx:id="county" layoutX="471.0" layoutY="92.0" prefHeight="28.0" prefWidth="195.0" promptText="Olt-Slatina" />
    </children>
 </AnchorPane>
