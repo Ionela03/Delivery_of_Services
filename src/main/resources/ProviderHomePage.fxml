@@ -10,18 +10,16 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="490.0" prefWidth="660.0"
-            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="961.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
    <left>
       <AnchorPane prefHeight="490.0" prefWidth="275.0" style="-fx-background-color: #EAA568;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="34.0" layoutY="233.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" text="Profile">
+            <Button fx:id="profileButton" layoutX="34.0" layoutY="233.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Profile">
                <effect>
                   <InnerShadow />
                </effect>
             </Button>
-            <Button layoutX="31.0" layoutY="433.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Log Out">
+            <Button fx:id="logOutButton" layoutX="31.0" layoutY="433.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="182.0" text="Log Out">
                <effect>
                   <InnerShadow>
                      <color>
@@ -30,7 +28,7 @@
                   </InnerShadow>
                </effect>
             </Button>
-            <Button layoutX="33.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" text="Requests">
+            <Button fx:id="requestButton" layoutX="33.0" layoutY="289.0" mnemonicParsing="false" onAction="#requestButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Requests">
                <effect>
                   <InnerShadow />
                </effect>
@@ -47,17 +45,17 @@
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="421.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="307.0" layoutY="387.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="51.0" style="-fx-background-color: #68EA79;" text="+">
+            <Button fx:id="addButton" alignment="CENTER" layoutX="34.0" layoutY="350.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="53.0" prefWidth="195.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font size="18.0" />
                </font>
                <effect>
                   <InnerShadow />
                </effect>
             </Button>
-            <Label layoutX="16.0" layoutY="88.0" prefHeight="35.0" prefWidth="218.0" text="My announcements">
+            <Label alignment="CENTER" layoutX="11.0" layoutY="72.0" prefHeight="35.0" prefWidth="218.0" text="My announcements">
                <font>
                   <Font size="24.0" />
                </font>
@@ -65,32 +63,14 @@
                   <InnerShadow />
                </effect>
             </Label>
-            <Button layoutX="16.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Announcement 1">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button layoutX="15.0" layoutY="189.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Announcement 2">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button layoutX="17.0" layoutY="233.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="Announcement 3">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button layoutX="16.0" layoutY="281.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Announcement 4">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button layoutX="17.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Announcement 5">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
          </children>
       </AnchorPane>
    </right>
+   <center>
+      <ImageView fitHeight="256.0" fitWidth="414.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@images/pozaProvider.jpg" />
+         </image>
+      </ImageView>
+   </center>
 </BorderPane>
