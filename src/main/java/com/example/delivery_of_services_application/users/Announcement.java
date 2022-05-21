@@ -8,7 +8,7 @@ public class Announcement {
     public String deplHome;
     public String price;
     public String negociablePrice;
-    public String phone;
+    public String provider;
     public String description;
 
 
@@ -20,7 +20,7 @@ public class Announcement {
         this.deplHome=deplHome;
         this.price = price;
         this.negociablePrice = negociablePrice;
-        this.phone = phone;
+        this.provider = phone;
         this.description = description;
     }
 
@@ -52,7 +52,7 @@ public class Announcement {
     }
 
     public String getPhone(){
-        return phone;
+        return provider;
     }
 
     public String getDescription(){
