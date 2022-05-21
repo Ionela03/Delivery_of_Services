@@ -37,11 +37,11 @@ public class LoginController {
     @FXML
     private AnchorPane openInstructorInterface;
 
-    @FXML
+        @FXML
     public void loginButtonOnAction(ActionEvent event) throws IOException{
-
             String username=usernameTextField.getText();
             String password=passwordField.getText();
+
             if(username!=null && password!=null){
                 int k;
                 k= UserService.validateLogin(username,password);

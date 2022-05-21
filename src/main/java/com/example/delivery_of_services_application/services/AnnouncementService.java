@@ -4,6 +4,7 @@ import com.example.delivery_of_services_application.exceptions.AnnouncementAlrea
 import com.example.delivery_of_services_application.exceptions.UsernameAlreadyExistsException;
 import com.example.delivery_of_services_application.users.Announcement;
 import com.example.delivery_of_services_application.users.User;
+import javafx.fxml.FXML;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 

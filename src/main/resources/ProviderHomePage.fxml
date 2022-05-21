@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="961.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
    <left>
-      <AnchorPane prefHeight="490.0" prefWidth="275.0" style="-fx-background-color: #EAA568;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="508.0" prefWidth="181.0" style="-fx-background-color: #EAA568;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="profileButton" layoutX="34.0" layoutY="233.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Profile">
+            <Button fx:id="profileButton" layoutX="7.0" layoutY="228.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Profile">
                <effect>
                   <InnerShadow />
                </effect>
             </Button>
-            <Button fx:id="logOutButton" layoutX="31.0" layoutY="433.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="182.0" text="Log Out">
+            <Button fx:id="logOutButton" layoutX="9.0" layoutY="433.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="182.0" text="Log Out">
                <effect>
                   <InnerShadow>
                      <color>
@@ -28,12 +25,12 @@
                   </InnerShadow>
                </effect>
             </Button>
-            <Button fx:id="requestButton" layoutX="33.0" layoutY="289.0" mnemonicParsing="false" onAction="#requestButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Requests">
+            <Button fx:id="requestButton" layoutX="7.0" layoutY="291.0" mnemonicParsing="false" onAction="#requestButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Requests">
                <effect>
                   <InnerShadow />
                </effect>
             </Button>
-            <ImageView fitHeight="130.0" fitWidth="172.0" layoutX="41.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="130.0" fitWidth="172.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/Provider.png" />
                </image>
@@ -45,9 +42,9 @@
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="508.0" prefWidth="197.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addButton" alignment="CENTER" layoutX="34.0" layoutY="350.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="53.0" prefWidth="195.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
+            <Button fx:id="addButton" alignment="CENTER" layoutX="17.0" layoutY="350.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="89.0" prefWidth="212.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
                <font>
                   <Font size="18.0" />
                </font>
@@ -55,19 +52,19 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Label alignment="CENTER" layoutX="11.0" layoutY="72.0" prefHeight="35.0" prefWidth="218.0" text="My announcements">
+            <Button alignment="CENTER" layoutX="26.0" layoutY="68.0" mnemonicParsing="false" onAction="#adViewButtonOnAction" prefHeight="89.0" prefWidth="196.0" style="-fx-background-color: #7CD4F4;" text="My announcements">
                <font>
-                  <Font size="24.0" />
+                  <Font size="18.0" />
                </font>
                <effect>
                   <InnerShadow />
                </effect>
-            </Label>
+            </Button>
          </children>
       </AnchorPane>
    </right>
    <center>
-      <ImageView fitHeight="256.0" fitWidth="414.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="256.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
             <Image url="@images/pozaProvider.jpg" />
          </image>
