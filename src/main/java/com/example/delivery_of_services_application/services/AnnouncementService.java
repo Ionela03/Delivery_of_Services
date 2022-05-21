@@ -13,11 +13,11 @@ import static com.example.delivery_of_services_application.services.FileSystemSe
 
 public class AnnouncementService {
 
-    private static ObjectRepository<Announcement> announcementRepository;
+    public static ObjectRepository<Announcement> announcementRepository;
 
     public static void initAnnouncementsDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("announcement-database.db").toFile())
+                .filePath(getPathToFile("announcementDatabase.db").toFile())
                 .openOrCreate("test", "test");
 
         announcementRepository = database.getRepository(Announcement.class);

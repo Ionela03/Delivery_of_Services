@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.AddAnnouncementController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.AddAnnouncementController">
    <children>
       <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="600.0" prefWidth="283.0" style="-fx-background-color: #EAA568;">
          <children>
@@ -59,7 +59,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <ChoiceBox fx:id="domain" layoutX="472.0" layoutY="135.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
+      <ChoiceBox fx:id="domain" layoutX="456.0" layoutY="227.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
          <effect>
             <InnerShadow>
                <color>
@@ -68,27 +68,27 @@
             </InnerShadow>
          </effect>
       </ChoiceBox>
-      <Label layoutX="343.0" layoutY="134.0" text="Domain">
+      <Label layoutX="348.0" layoutY="226.0" text="Domain">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="299.0" layoutY="286.0" prefHeight="28.0" prefWidth="166.0" text="Negociable Price">
+      <Label alignment="CENTER" layoutX="293.0" layoutY="363.0" prefHeight="28.0" prefWidth="166.0" text="Negociable Price">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="306.0" layoutY="227.0" prefHeight="17.0" prefWidth="150.0" text="Price">
+      <Label alignment="CENTER" layoutX="306.0" layoutY="317.0" prefHeight="17.0" prefWidth="150.0" text="Price">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="315.0" layoutY="413.0" prefHeight="28.0" prefWidth="133.0" text="Descriprition">
+      <Label alignment="CENTER" layoutX="315.0" layoutY="458.0" prefHeight="28.0" prefWidth="133.0" text="Descriprition">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="deplHome" layoutX="480.0" layoutY="175.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #F9E9C9;">
+      <ChoiceBox fx:id="deplHome" layoutX="460.0" layoutY="274.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #F9E9C9;">
          <effect>
             <InnerShadow>
                <color>
@@ -97,25 +97,25 @@
             </InnerShadow>
          </effect>
       </ChoiceBox>
-      <TextField fx:id="price" layoutX="471.0" layoutY="227.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex: 100 Ron" />
-      <Label layoutX="325.0" layoutY="99.0" text="County-Town">
+      <TextField fx:id="price" layoutX="456.0" layoutY="317.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex: 100 Ron" />
+      <Label layoutX="319.0" layoutY="178.0" text="County-Town">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="description" layoutX="449.0" layoutY="394.0" prefHeight="118.0" prefWidth="221.0" promptText="Ex: I can make your websites" />
-      <Label alignment="CENTER" layoutX="307.0" layoutY="338.0" prefHeight="17.0" prefWidth="150.0" text="Phone">
+      <TextField fx:id="description" layoutX="458.0" layoutY="458.0" prefHeight="118.0" prefWidth="221.0" promptText="Ex: I can make your websites" />
+      <Label alignment="CENTER" layoutX="306.0" layoutY="413.0" prefHeight="17.0" prefWidth="150.0" text="Username">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="phone" layoutX="472.0" layoutY="338.0" prefHeight="28.0" prefWidth="195.0" promptText="07..." />
-      <Label layoutX="299.0" layoutY="175.0" prefHeight="28.0" prefWidth="181.0" text="Displacement Home">
+      <TextField fx:id="phone" layoutX="456.0" layoutY="413.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex. provider..." />
+      <Label layoutX="285.0" layoutY="273.0" prefHeight="28.0" prefWidth="181.0" text="Displacement Home">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="negociablePrice" layoutX="471.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
+      <ChoiceBox fx:id="negociablePrice" layoutX="456.0" layoutY="364.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #F9E9C9#71F2D4;">
          <effect>
             <InnerShadow>
                <color>
@@ -124,12 +124,12 @@
             </InnerShadow>
          </effect>
       </ChoiceBox>
-      <Label layoutX="302.0" layoutY="50.0" text="No Announcement">
+      <Label layoutX="296.0" layoutY="127.0" text="No Announcement">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="noAnnouncement" layoutX="477.0" layoutY="50.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex 001" />
-      <TextField fx:id="county" layoutX="471.0" layoutY="92.0" prefHeight="28.0" prefWidth="195.0" promptText="Olt-Slatina" />
+      <TextField fx:id="noAnnouncement" layoutX="456.0" layoutY="127.0" prefHeight="28.0" prefWidth="195.0" promptText="Ex 001" />
+      <TextField fx:id="county" layoutX="456.0" layoutY="178.0" prefHeight="28.0" prefWidth="195.0" promptText="Olt-Slatina" />
    </children>
 </AnchorPane>
