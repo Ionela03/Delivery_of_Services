@@ -25,7 +25,7 @@ public class LoginController {
     @FXML
     private Label loginMessageLabel;
     @FXML
-    private TextField usernameTextField;
+   private TextField usernameTextField;
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -93,6 +93,10 @@ public class LoginController {
         Scene scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public TextField getUsernameTextField(){
+            return usernameTextField;
     }
 
 }

@@ -73,4 +73,17 @@ public class UserService {
     }
 
 
+    public static User returnCurrentUser(String username, String password) {
+        for (User user : userRepository.find()) {
+            if(username.equals(user.getUsername()))
+            {   String encodedPassword=encodePassword(username,password);
+                if (encodedPassword.equals(user.getPassword())) {
+                    return user;
+                }
+            }
+        }
+        return null;
+    }
+
+
 }

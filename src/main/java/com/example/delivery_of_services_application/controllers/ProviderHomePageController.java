@@ -11,7 +11,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ProviderHomePageController {
-    public void profileButtonOnAction(ActionEvent actionEvent) {
+    public void profileButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage;
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ProviderProfilePage.fxml"));
+        stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
     public void adViewButtonOnAction(ActionEvent actionEvent) throws IOException {
