@@ -36,6 +36,14 @@ public class AnnouncementService {
                 throw new AnnouncementAlreadyExistsException(noAnnouncement);
         }
     }
+    public static void deleteAnnouncement(String name){
+        for(Announcement announcement: announcementRepository.find()){
+            if(name.equals(announcement.getNoAnnouncement())){
+                announcement.setNoAnnouncement("");
+                announcementRepository.update(announcement);
+            }
+        }
+    }
 
 
 

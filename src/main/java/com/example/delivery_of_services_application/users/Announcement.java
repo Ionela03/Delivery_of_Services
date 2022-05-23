@@ -1,14 +1,25 @@
 package com.example.delivery_of_services_application.users;
 
+import javafx.fxml.FXML;
+import org.dizitart.no2.objects.Id;
+
 public class Announcement {
 
+    @Id
     public String noAnnouncement;
+
     public String county;
+
     public String domain;
+
     public String deplHome;
+
     public String price;
+
     public String negociablePrice;
+
     public String provider;
+
     public String description;
 
 
@@ -37,5 +48,9 @@ public class Announcement {
             return(((Announcement)o).noAnnouncement.equals(noAnnouncement));
         else
             return false;
+    }
+
+    public void setNoAnnouncement(String s) {
+        this.noAnnouncement = s;
     }
 }

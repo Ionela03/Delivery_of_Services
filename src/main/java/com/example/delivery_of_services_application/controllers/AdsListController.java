@@ -42,6 +42,8 @@ public class AdsListController {
 
     @FXML
     Label description;
+    @FXML
+    private Button deleteButton;
 
     @FXML
     void seeAnnouncementsButtonOnAction(ActionEvent actionEvent){
@@ -95,6 +97,20 @@ public class AdsListController {
 
         }
 
-    public void deleteButtonOnAction(ActionEvent actionEvent) {
+    public void deleteButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage;
+        String name = listView.getSelectionModel().getSelectedItem();
+        for (Announcement ad : announcementRepository.find())
+            if (Objects.equals(ad.noAnnouncement, name)) {
+                announcementRepository.remove(ad);
+
+                stage=(Stage) deleteButton.getScene().getWindow();
+                stage.close();
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("AdsList.fxml"));
+                stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+                Scene scene=new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
     }
 }
