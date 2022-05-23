@@ -1,6 +1,7 @@
 package com.example.delivery_of_services_application.controllers;
 
 
+import com.example.delivery_of_services_application.services.ChatService;
 import com.example.delivery_of_services_application.users.Announcement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,6 +35,10 @@ public class MedicalServicesPageController {
     Label displacement;
     @FXML
     Label description;
+    @FXML
+    TextField username;
+    @FXML
+    Label request;
     public void initialize(){
         for(Announcement ad: announcementRepository.find() )
             if(Objects.equals(ad.domain, "Medical Services"))
@@ -61,6 +66,14 @@ public class MedicalServicesPageController {
     @FXML
     public void sendRequestButtonOnAction(){
 
+        String s= listView.getSelectionModel().getSelectedItem();
+        System.out.println("-"+s+"-");
+        for(Announcement ad: announcementRepository.find() )
+            if(Objects.equals(ad.noAnnouncement,s)) {
+                ChatService.initiateChat(username.getText(), ad.provider, "", "Yes", ad.noAnnouncement);
+                request.setText("Request sent successfully");
+                return;
+            }
     }
 
 

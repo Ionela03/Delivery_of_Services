@@ -56,8 +56,13 @@ public class NewCustomerPageController {
         stage.show();
     }
    @FXML
-   public void historyButtonOnAction(){
-
+   public void historyButtonOnAction(ActionEvent event) throws IOException {
+       Stage stage;
+       Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("HistoryPage.fxml"));
+       stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+       Scene scene=new Scene(root);
+       stage.setScene(scene);
+       stage.show();
    }
    @FXML
    public void logoutButtonOnAction(ActionEvent event) throws IOException {
