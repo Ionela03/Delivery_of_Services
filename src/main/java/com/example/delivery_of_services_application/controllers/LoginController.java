@@ -53,7 +53,7 @@ public class LoginController {
                         Parent root;
                         stage = (Stage) loginButton.getScene().getWindow();
                         root=FXMLLoader.load(getClass().getClassLoader().getResource("ProviderHomePage.fxml"));
-                        stage.setScene(new Scene(root, 700, 400));
+                        stage.setScene(new Scene(root, 800, 550));
                         stage.show();
                     }
                     if(k==2){

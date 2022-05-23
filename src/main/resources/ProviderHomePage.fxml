@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
    <left>
       <AnchorPane prefHeight="508.0" prefWidth="181.0" style="-fx-background-color: #EAA568;" BorderPane.alignment="CENTER">
          <children>
@@ -44,7 +44,7 @@
    <right>
       <AnchorPane prefHeight="508.0" prefWidth="197.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addButton" alignment="CENTER" layoutX="17.0" layoutY="350.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="89.0" prefWidth="212.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
+            <Button fx:id="addButton" alignment="CENTER" layoutX="9.0" layoutY="350.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="84.0" prefWidth="200.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
                <font>
                   <Font size="18.0" />
                </font>
@@ -52,7 +52,7 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Button alignment="CENTER" layoutX="26.0" layoutY="68.0" mnemonicParsing="false" onAction="#adViewButtonOnAction" prefHeight="89.0" prefWidth="196.0" style="-fx-background-color: #7CD4F4;" text="My announcements">
+            <Button alignment="CENTER" layoutX="12.0" layoutY="69.0" mnemonicParsing="false" onAction="#adViewButtonOnAction" prefHeight="89.0" prefWidth="185.0" style="-fx-background-color: #7CD4F4;" text="My announcements">
                <font>
                   <Font size="18.0" />
                </font>
