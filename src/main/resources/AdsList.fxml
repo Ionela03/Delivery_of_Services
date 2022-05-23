@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="422.0" style="-fx-background-color: #DC8B33;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.AdsListController">
+   <children>
+      <Button layoutX="14.0" layoutY="312.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #FCF3CF;" text="Back">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.04548408091068268" green="0.9210526347160339" blue="0.8626813888549805" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #FCF3CF;" text="Log out">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <ListView fx:id="listView" layoutX="154.0" layoutY="103.0" prefHeight="283.0" prefWidth="256.0" style="-fx-background-color: #FCF3CF;" />
+      <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#addButtonOnAction" style="-fx-background-color: #FCF3CF;" text="Add announcement">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <ImageView fitHeight="90.0" fitWidth="121.0" layoutX="217.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/img10.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="48.0" layoutY="157.0" text="Username" />
+      <TextField fx:id="username" layoutX="14.0" layoutY="174.0" prefHeight="25.0" prefWidth="121.0" />
+      <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#seeAnnouncementsButtonOnAction" style="-fx-background-color: #FCF3CF;" text="See Announcements">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

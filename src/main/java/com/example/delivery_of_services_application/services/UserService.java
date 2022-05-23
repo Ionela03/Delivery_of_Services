@@ -14,7 +14,7 @@ import static com.example.delivery_of_services_application.services.FileSystemSe
 
 public class UserService {
 
-    private static ObjectRepository<User> userRepository;
+    public static ObjectRepository<User> userRepository;
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
@@ -70,6 +70,36 @@ public class UserService {
             throw new IllegalStateException("SHA-512 does not exist!");
         }
         return md;
+    }
+
+
+    public static User returnCurrentUser(String username, String password) {
+        for (User user : userRepository.find()) {
+            if(username.equals(user.getUsername()))
+            {   String encodedPassword=encodePassword(username,password);
+                if (encodedPassword.equals(user.getPassword())) {
+                    return user;
+                }
+            }
+        }
+        return null;
+    }
+    public static boolean updateProfile(String username, String password){
+        for(User user: userRepository.find())
+        {
+            if(Objects.equals(username,user.getUsername()))
+            {
+                String encodedPassword=encodePassword(username,password);
+                if(Objects.equals(encodedPassword,user.getPassword())){
+                    user.setUsername(username);
+                    user.setPassword(encodedPassword);
+                    userRepository.update(user);
+                    return true;
+
+                }
+            }
+        }
+        return false;
     }
 
 
