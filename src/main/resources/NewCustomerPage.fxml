@@ -7,43 +7,43 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.NewCustomerPageController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.NewCustomerPageController">
    <children>
-      <BorderPane fx:id="mainPane" prefHeight="407.0" prefWidth="605.0" style="-fx-background-color: #FCF3CF;">
+      <BorderPane fx:id="mainPane" prefHeight="607.0" prefWidth="805.0" style="-fx-background-color: #FCF3CF;">
          <right>
             <VBox prefHeight="402.0" prefWidth="123.0" style="-fx-background-color: #DC8B33;" BorderPane.alignment="TOP_RIGHT">
                <children>
                   <Button fx:id="cleaningButton" mnemonicParsing="false" onAction="#cleaningButtonOnAction" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFA500;" text="Cleaning">
                      <VBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="50.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
                      </effect></Button>
                   <Button fx:id="renovationWorkButton" mnemonicParsing="false" onAction="#renovationWorkButtonOnAction" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: #FFA500;" text="Renovation Work">
                      <VBox.margin>
-                        <Insets top="40.0" />
+                        <Insets top="70.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
                      </effect></Button>
                   <Button fx:id="medicalServicesButton" mnemonicParsing="false" onAction="#medicalServicesButtonOnAction" prefHeight="36.0" prefWidth="144.0" style="-fx-background-color: #FFA500;" text="Medical Services">
                      <VBox.margin>
-                        <Insets top="40.0" />
+                        <Insets top="70.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
                      </effect></Button>
                   <Button fx:id="itSupportButton" mnemonicParsing="false" onAction="#itSupportButtonOnAction" prefHeight="36.0" prefWidth="146.0" style="-fx-background-color: #FFA500;" text="IT Support">
                      <VBox.margin>
-                        <Insets top="40.0" />
+                        <Insets top="70.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
                      </effect></Button>
                   <Button fx:id="othersButton" mnemonicParsing="false" onAction="#othersButtonOnAction" prefHeight="37.0" prefWidth="146.0" style="-fx-background-color: #FFA500;" text="Others...">
                      <VBox.margin>
-                        <Insets top="40.0" />
+                        <Insets top="70.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
@@ -62,7 +62,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #FFA500;" text="Profile">
                      <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets top="30.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
@@ -70,7 +70,7 @@
                   </Button>
                   <Button mnemonicParsing="false" onAction="#historyButtonOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FFA500;" text="History">
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="20.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow />
@@ -78,7 +78,7 @@
                   </Button>
                   <Button mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FFA500;" text="Log Out">
                      <VBox.margin>
-                        <Insets top="290.0" />
+                        <Insets top="450.0" />
                      </VBox.margin>
                      <effect>
                         <InnerShadow>

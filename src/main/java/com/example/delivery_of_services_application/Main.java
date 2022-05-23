@@ -1,6 +1,7 @@
 package com.example.delivery_of_services_application;
 
 import com.example.delivery_of_services_application.services.AnnouncementService;
+import com.example.delivery_of_services_application.services.ChatService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,6 +20,7 @@ public class Main extends Application {
         initDirectory();
         UserService.initDatabase();
         AnnouncementService.initAnnouncementsDatabase();
+        ChatService.initChatDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("log_in.fxml"));
         primaryStage.setTitle("Delivery of Services App");
         primaryStage.setScene(new Scene(root, 600, 451));
