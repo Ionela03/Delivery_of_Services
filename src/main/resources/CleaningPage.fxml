@@ -76,17 +76,18 @@
       <Label fx:id="negotiable" layoutX="178.0" layoutY="477.0" />
       <Label fx:id="displacement" layoutX="178.0" layoutY="503.0" />
       <Label fx:id="description" layoutX="178.0" layoutY="529.0" prefHeight="17.0" prefWidth="392.0" />
-      <Label layoutX="94.0" layoutY="569.0" text="Username:">
+      <Label layoutX="37.0" layoutY="569.0" text="Username:">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="username" layoutX="160.0" layoutY="565.0" />
-      <Button layoutX="329.0" layoutY="565.0" mnemonicParsing="false" onAction="#sendRequestButtonOnAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #DC8B33;" text="Send Request">
+      <TextField fx:id="username" layoutX="103.0" layoutY="565.0" />
+      <Button layoutX="269.0" layoutY="565.0" mnemonicParsing="false" onAction="#sendRequestButtonOnAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #DC8B33;" text="Send Request">
          <effect>
             <InnerShadow />
          </effect>
       </Button>
+      <Label fx:id="request" layoutX="385.0" layoutY="569.0" prefHeight="17.0" prefWidth="214.0" />
    </children>
    <effect>
       <InnerShadow />
