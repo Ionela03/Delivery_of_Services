@@ -7,16 +7,16 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.ProviderHomePageController">
    <left>
-      <AnchorPane prefHeight="508.0" prefWidth="181.0" style="-fx-background-color: #EAA568;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="300.0" prefWidth="193.0" style="-fx-background-color: #EAA568;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="profileButton" layoutX="7.0" layoutY="228.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Profile">
+            <Button fx:id="profileButton" layoutX="4.0" layoutY="177.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Profile">
                <effect>
                   <InnerShadow />
                </effect>
             </Button>
-            <Button fx:id="logOutButton" layoutX="9.0" layoutY="433.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="182.0" text="Log Out">
+            <Button fx:id="logOutButton" layoutX="6.0" layoutY="340.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="182.0" text="Log Out">
                <effect>
                   <InnerShadow>
                      <color>
@@ -25,7 +25,7 @@
                   </InnerShadow>
                </effect>
             </Button>
-            <Button fx:id="requestButton" layoutX="7.0" layoutY="291.0" mnemonicParsing="false" onAction="#requestButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Requests">
+            <Button fx:id="requestButton" layoutX="7.0" layoutY="216.0" mnemonicParsing="false" onAction="#requestButtonOnAction" prefHeight="25.0" prefWidth="186.0" text="Requests">
                <effect>
                   <InnerShadow />
                </effect>
@@ -42,9 +42,9 @@
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="508.0" prefWidth="197.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #F9E9C9;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addButton" alignment="CENTER" layoutX="17.0" layoutY="350.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="89.0" prefWidth="212.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
+            <Button fx:id="addButton" alignment="CENTER" layoutX="19.0" layoutY="298.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="63.0" prefWidth="184.0" style="-fx-background-color: #7CD4F4;" text="Add announcement">
                <font>
                   <Font size="18.0" />
                </font>
@@ -52,7 +52,7 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Button alignment="CENTER" layoutX="26.0" layoutY="68.0" mnemonicParsing="false" onAction="#adViewButtonOnAction" prefHeight="89.0" prefWidth="196.0" style="-fx-background-color: #7CD4F4;" text="My announcements">
+            <Button alignment="CENTER" layoutX="28.0" layoutY="49.0" mnemonicParsing="false" onAction="#adViewButtonOnAction" prefHeight="63.0" prefWidth="181.0" style="-fx-background-color: #7CD4F4;" text="My announcements">
                <font>
                   <Font size="18.0" />
                </font>
@@ -64,7 +64,7 @@
       </AnchorPane>
    </right>
    <center>
-      <ImageView fitHeight="256.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="197.0" fitWidth="296.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
             <Image url="@images/pozaProvider.jpg" />
          </image>

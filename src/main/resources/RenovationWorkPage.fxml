@@ -7,9 +7,9 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="400.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.RenovationWorkPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.RenovationWorkPageController">
     <children>
-        <Label layoutX="127.0" layoutY="8.0" prefHeight="26.0" prefWidth="146.0" text="Renovation Work ">
+        <Label layoutX="234.0" layoutY="1.0" prefHeight="26.0" prefWidth="149.0" text="Renovation Work">
             <font>
                 <Font name="System Bold Italic" size="17.0" />
             </font>
@@ -29,12 +29,64 @@
                     </stops>
                 </RadialGradient>
             </textFill></Label>
-        <ImageView fitHeight="105.0" fitWidth="377.0" layoutX="11.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="99.0" fitWidth="377.0" layoutX="130.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/img5.jpg" />
             </image>
         </ImageView>
-        <ListView fx:id="listView" layoutX="11.0" layoutY="139.0" prefHeight="217.0" prefWidth="377.0" style="-fx-background-color: #DC8B33;" />
+        <Button layoutX="274.0" layoutY="330.0" mnemonicParsing="false" onAction="#selectButtonOnAction" style="-fx-background-color: #DC8B33;" text="Select">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <ListView fx:id="listView" layoutX="4.0" layoutY="131.0" prefHeight="189.0" prefWidth="587.0" style="-fx-background-color: #DC8B33;" />
+        <Label layoutX="27.0" layoutY="355.0" text="Description">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="108.0" layoutY="398.0" prefHeight="17.0" prefWidth="60.0" text="Provider:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="108.0" layoutY="427.0" text="Location:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label layoutX="124.0" layoutY="452.0" text="Price:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label layoutX="24.0" layoutY="476.0" prefHeight="17.0" prefWidth="136.0" text="Is the price negotiable?">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label layoutX="27.0" layoutY="529.0" text="Provider's Description:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label layoutX="27.0" layoutY="503.0" text="Possible Displacement:">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label fx:id="provider1" layoutX="178.0" layoutY="398.0" prefHeight="17.0" prefWidth="392.0" />
+        <Label fx:id="location1" layoutX="178.0" layoutY="419.0" prefHeight="17.0" prefWidth="392.0" />
+        <Label fx:id="price" layoutX="178.0" layoutY="450.0" prefHeight="17.0" prefWidth="392.0" />
+        <Label fx:id="negotiable" layoutX="178.0" layoutY="477.0" />
+        <Label fx:id="displacement" layoutX="178.0" layoutY="503.0" />
+        <Label fx:id="description" layoutX="178.0" layoutY="529.0" prefHeight="17.0" prefWidth="392.0" />
+        <Label layoutX="94.0" layoutY="569.0" text="Username:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="username" layoutX="160.0" layoutY="565.0" />
+        <Button layoutX="329.0" layoutY="565.0" mnemonicParsing="false" onAction="#sendRequestButtonOnAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #DC8B33;" text="Send Request">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
     </children>
     <effect>
         <InnerShadow />

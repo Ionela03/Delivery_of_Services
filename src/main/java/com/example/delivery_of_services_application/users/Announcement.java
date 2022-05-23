@@ -12,7 +12,7 @@ public class Announcement {
     public String description;
 
 
-    public Announcement(String noAnnouncement, String county, String domain, String deplHome, String price, String negociablePrice, String phone, String description) {
+    public Announcement(String noAnnouncement, String county, String domain, String deplHome, String price, String negociablePrice, String provider, String description) {
 
         this.noAnnouncement = noAnnouncement;
         this.county = county;
@@ -20,43 +20,15 @@ public class Announcement {
         this.deplHome=deplHome;
         this.price = price;
         this.negociablePrice = negociablePrice;
-        this.provider = phone;
+        this.provider = provider;
         this.description = description;
     }
 
     public Announcement(){
 
     }
-    public String getNoAnnouncement() {
+    public String getNoAnnouncement(){
         return noAnnouncement;
-    }
-
-    public String getCounty(){
-        return county;
-    }
-
-    public String getDomain(){
-        return domain;
-    }
-
-    public String getDeplHome(){
-        return deplHome;
-    }
-
-    public String getPrice(){
-        return price;
-    }
-
-    public String getNegociablePrice(){
-        return negociablePrice;
-    }
-
-    public String getPhone(){
-        return provider;
-    }
-
-    public String getDescription(){
-        return description;
     }
 
     @Override
