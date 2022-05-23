@@ -46,10 +46,15 @@ public class NewCustomerPageController {
         Pane view= object.getPage("OthersPage.fxml");
         mainPane.setCenter(view);
     }
-   @FXML
-   public void profileButtonOnAction(){
-
-   }
+    @FXML
+    public void profileButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage;
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("CustomerProfilePage.fxml"));
+        stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
    @FXML
    public void historyButtonOnAction(){
 
