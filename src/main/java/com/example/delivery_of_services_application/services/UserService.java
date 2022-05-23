@@ -84,6 +84,23 @@ public class UserService {
         }
         return null;
     }
+    public static boolean updateProfile(String username, String password){
+        for(User user: userRepository.find())
+        {
+            if(Objects.equals(username,user.getUsername()))
+            {
+                String encodedPassword=encodePassword(username,password);
+                if(Objects.equals(encodedPassword,user.getPassword())){
+                    user.setUsername(username);
+                    user.setPassword(encodedPassword);
+                    userRepository.update(user);
+                    return true;
+
+                }
+            }
+        }
+        return false;
+    }
 
 
 }

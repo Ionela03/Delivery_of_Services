@@ -48,4 +48,13 @@ public class ProviderProfileController {
         stage.show();
 
     }
+
+    public void updateButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage;
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ModifyCredentialsPage.fxml"));
+        stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
