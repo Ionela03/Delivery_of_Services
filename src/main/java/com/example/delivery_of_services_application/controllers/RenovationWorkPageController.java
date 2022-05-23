@@ -1,7 +1,9 @@
 package com.example.delivery_of_services_application.controllers;
 
 
+import com.example.delivery_of_services_application.exceptions.UsernameAlreadyExistsException;
 import com.example.delivery_of_services_application.services.ChatService;
+import com.example.delivery_of_services_application.services.UserService;
 import com.example.delivery_of_services_application.users.Announcement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,9 +38,9 @@ public class RenovationWorkPageController {
     @FXML
     Label description;
     @FXML
-    Label username;
+    TextField username;
     @FXML
-    TextField request;
+    Label request;
     public void initialize(){
         for(Announcement ad: announcementRepository.find() )
             if(Objects.equals(ad.domain, "Renovation Work"))
@@ -64,16 +66,16 @@ public class RenovationWorkPageController {
 
     }
     @FXML
-    public void sendRequestButtonOnAction(){
-
+    public void sendRequestButtonOnAction()throws Exception{
         String s= listView.getSelectionModel().getSelectedItem();
         System.out.println("-"+s+"-");
         for(Announcement ad: announcementRepository.find() )
             if(Objects.equals(ad.noAnnouncement,s)) {
                 ChatService.initiateChat(username.getText(), ad.provider, "", "Yes", ad.noAnnouncement);
-                request.setText("Request sent succesfully");
+                request.setText("Request sent successfully");
                 return;
             }
+
     }
 
 

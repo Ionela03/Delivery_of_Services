@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_of_services_application.controllers.HistoryPageController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="168.0" style="-fx-background-color: #DC8B33;">
+         <children>
+            <ImageView fitHeight="173.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@images/img11.jpg" />
+                </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="172.0" text="Username" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Button layoutX="10.0" layoutY="503.0" mnemonicParsing="false" onAction="#seeAnnouncementsButtonOnAction" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #DC8B33;" text="See Annoncements">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #DC8B33;" text="Back">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="157.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #DC8B33;" text="Log out">
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+      <Label layoutX="281.0" layoutY="21.0" text="History">
+         <font>
+            <Font name="System Bold Italic" size="33.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8551424145698547" green="0.8600000143051147" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.4000000059604645" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ListView fx:id="listView" layoutX="187.0" layoutY="88.0" prefHeight="342.0" prefWidth="300.0" style="-fx-background-color: #DC8B33;" />
+      <Button layoutX="251.0" layoutY="452.0" mnemonicParsing="false" onAction="#seeDetailsButtonOnAction" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #DC8B33;" text="See details">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label fx:id="label1" layoutX="181.0" layoutY="482.0" prefHeight="10.0" prefWidth="308.0" />
+      <Label fx:id="label2" layoutX="181.0" layoutY="503.0" prefHeight="19.0" prefWidth="308.0" />
+      <Button layoutX="315.0" layoutY="560.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #DC8B33;" text="Delete" textFill="#ff0b0b">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.9736841917037964" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

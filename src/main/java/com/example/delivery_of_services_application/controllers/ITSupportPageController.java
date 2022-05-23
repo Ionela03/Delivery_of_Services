@@ -71,7 +71,7 @@ public class ITSupportPageController {
         for(Announcement ad: announcementRepository.find() )
             if(Objects.equals(ad.noAnnouncement,s)) {
                 ChatService.initiateChat(username.getText(), ad.provider, "", "Yes", ad.noAnnouncement);
-                request.setText("Request sent succesfully");
+                request.setText("Request sent successfully");
                 return;
             }
     }
