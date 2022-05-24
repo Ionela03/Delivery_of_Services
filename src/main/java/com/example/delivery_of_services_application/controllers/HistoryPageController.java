@@ -63,6 +63,11 @@ public class HistoryPageController {
     @FXML
     public void seeDetailsButtonOnAction(){
         for(Chat c: chatRepository.find() )
+            if(Objects.equals(c.ad, listView.getSelectionModel().getSelectedItem())) {
+                chatRepository.update(c);
+            }
+
+        for(Chat c: chatRepository.find() )
             if(Objects.equals(c.ad, listView.getSelectionModel().getSelectedItem())){
                 label1.setText(c.expeditor+" ---> "+c.destinatar);
                 label2.setText("Status: "+c.status);

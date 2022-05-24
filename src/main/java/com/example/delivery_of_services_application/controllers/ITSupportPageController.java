@@ -66,7 +66,7 @@ public class ITSupportPageController {
 
     }
     @FXML
-    public void sendRequestButtonOnAction(){
+    public void sendRequestButtonOnAction()throws Exception {
         String s= listView.getSelectionModel().getSelectedItem();
         System.out.println("-"+s+"-");
         String user=username.getText();
@@ -86,6 +86,8 @@ public class ITSupportPageController {
             }
 
     }
+
+
 
 
 }

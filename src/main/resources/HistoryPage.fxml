@@ -88,7 +88,7 @@
       </Button>
       <Label fx:id="label1" layoutX="181.0" layoutY="482.0" prefHeight="10.0" prefWidth="308.0" />
       <Label fx:id="label2" layoutX="181.0" layoutY="503.0" prefHeight="19.0" prefWidth="308.0" />
-      <Button layoutX="315.0" layoutY="560.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #DC8B33;" text="Delete" textFill="#ff0b0b">
+      <Button layoutX="315.0" layoutY="560.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #DC8B33;" text="chat" textFill="#ff0b0b">
          <effect>
             <InnerShadow>
                <color>

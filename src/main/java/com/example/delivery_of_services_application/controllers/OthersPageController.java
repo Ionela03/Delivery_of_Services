@@ -52,7 +52,7 @@ public class OthersPageController {
     @FXML
     public void selectButtonOnAction(ActionEvent event){
         String s= listView.getSelectionModel().getSelectedItem();
-        System.out.println("-"+s+"-");
+        System.out.println("-" + s + "-");
         for(Announcement ad: announcementRepository.find() )
             if(Objects.equals(ad.noAnnouncement,s)){
                 System.out.println("-"+ad.provider+"-");
@@ -66,12 +66,13 @@ public class OthersPageController {
 
     }
     @FXML
-    public void sendRequestButtonOnAction(){
+    public void sendRequestButtonOnAction()throws Exception{
         String s= listView.getSelectionModel().getSelectedItem();
+
         System.out.println("-"+s+"-");
         String user=username.getText();
         for(Announcement ad: announcementRepository.find() )
-            if(Objects.equals(ad.noAnnouncement,s)) {
+            if(ad.noAnnouncement.equals(s)) {
                 for (Chat chat : chatRepository.find())
                     if (Objects.equals(ad.noAnnouncement, chat.ad) ) {
                         request.setText("Request already sent!!!");

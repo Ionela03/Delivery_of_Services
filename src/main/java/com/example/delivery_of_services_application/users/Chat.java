@@ -1,10 +1,13 @@
 package com.example.delivery_of_services_application.users;
 
-public class Chat {
+import org.dizitart.no2.objects.Id;
 
+public class Chat {
+    @Id
     public String expeditor;
     public String destinatar;
     public String message;
+
     public String ad;
     public String status;
 
