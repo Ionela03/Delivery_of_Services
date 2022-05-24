@@ -18,7 +18,7 @@ public class AnnouncementService {
 
     public static void initAnnouncementsDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("announcementDatabase.db").toFile())
+                .filePath(getPathToFile("announcementDatabase2.db").toFile())
                 .openOrCreate("test", "test");
 
         announcementRepository = database.getRepository(Announcement.class);

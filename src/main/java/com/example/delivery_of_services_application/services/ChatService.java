@@ -12,7 +12,7 @@ public class ChatService {
 
     public static void initChatDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("chat_Database.db").toFile())
+                .filePath(getPathToFile("chat_Database2.db").toFile())
                 .openOrCreate("test", "test");
 
         chatRepository = database.getRepository(Chat.class);

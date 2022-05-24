@@ -18,6 +18,7 @@
     exports com.example.delivery_of_services_application.controllers;
     exports com.example.delivery_of_services_application.users;
     opens com.example.delivery_of_services_application.controllers to javafx.fxml;
+    opens  com.example.delivery_of_services_application.users;
 
     }
 

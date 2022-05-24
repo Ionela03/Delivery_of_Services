@@ -74,15 +74,6 @@ public class HistoryPageController {
             }
 
     }
-    @FXML
-    public void deleteButtonOnAction(){
-        for(Chat c: chatRepository.find() )
-            if(Objects.equals(c.ad, listView.getSelectionModel().getSelectedItem())){
-                c.expeditor="deleted";
-                c.destinatar="deleted";
-            }
-
-    }
 
 
 }
