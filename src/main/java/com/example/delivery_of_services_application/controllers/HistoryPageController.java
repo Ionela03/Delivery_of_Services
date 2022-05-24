@@ -38,7 +38,7 @@ public class HistoryPageController {
         for(Chat c: chatRepository.find() )
             if(Objects.equals(c.expeditor, username.getText()))
                 listView.getItems().addAll(c.ad );
-        listView.getViewOrder();
+        
 
     }
 
