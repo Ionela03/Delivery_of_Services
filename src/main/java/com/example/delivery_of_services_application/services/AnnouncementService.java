@@ -18,7 +18,7 @@ public class AnnouncementService {
 
     public static void initAnnouncementsDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("announcementDatabase.db").toFile())
+                .filePath(getPathToFile("announcementDatabase2.db").toFile())
                 .openOrCreate("test", "test");
 
         announcementRepository = database.getRepository(Announcement.class);
@@ -34,6 +34,14 @@ public class AnnouncementService {
         for (Announcement announcement : announcementRepository.find()) {
             if (noAnnouncement.equals(announcement.getNoAnnouncement()))
                 throw new AnnouncementAlreadyExistsException(noAnnouncement);
+        }
+    }
+    public static void deleteAnnouncement(String name){
+        for(Announcement announcement: announcementRepository.find()){
+            if(name.equals(announcement.getNoAnnouncement())){
+                announcement.setNoAnnouncement("");
+                announcementRepository.update(announcement);
+            }
         }
     }
 

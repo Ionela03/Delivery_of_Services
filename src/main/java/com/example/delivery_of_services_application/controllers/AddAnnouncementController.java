@@ -1,8 +1,6 @@
 package com.example.delivery_of_services_application.controllers;
 
 import com.example.delivery_of_services_application.exceptions.AnnouncementAlreadyExistsException;
-import com.example.delivery_of_services_application.exceptions.UsernameAlreadyExistsException;
-import com.example.delivery_of_services_application.services.UserService;
 import com.example.delivery_of_services_application.services.AnnouncementService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,13 +22,13 @@ public class AddAnnouncementController {
     @FXML
     private TextField county;
     @FXML
-    private ChoiceBox domain;
+    private ChoiceBox<String> domain;
     @FXML
     private TextField price;
     @FXML
-    private ChoiceBox deplHome;
+    private ChoiceBox<String> deplHome;
     @FXML
-    private ChoiceBox negociablePrice;
+    private ChoiceBox<String> negociablePrice;
     @FXML
     private TextField phone;
     @FXML
@@ -70,7 +68,7 @@ public class AddAnnouncementController {
     public void addButtonOnAction(ActionEvent actionEvent) {
 
             try {
-                AnnouncementService.addAnnouncement(noAnnouncement.getText(), county.getText(), (String)domain.getValue(), (String)deplHome.getValue(),price.getText(),(String)negociablePrice.getValue(), phone.getText(),description.getText());
+                AnnouncementService.addAnnouncement(noAnnouncement.getText(), county.getText(), domain.getValue(), deplHome.getValue(),price.getText(), negociablePrice.getValue(), phone.getText(),description.getText());
                 addMessage.setText("Announcement added successfully!");
             } catch (AnnouncementAlreadyExistsException e) {
                 addMessage.setText(e.getMessage());

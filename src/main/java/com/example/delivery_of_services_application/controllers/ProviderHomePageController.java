@@ -38,7 +38,13 @@ public class ProviderHomePageController {
         stage.show();
     }
 
-    public void requestButtonOnAction(ActionEvent actionEvent) {
+    public void requestButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage;
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("RequestPage.fxml"));
+        stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void addButtonOnAction(ActionEvent actionEvent) throws IOException {

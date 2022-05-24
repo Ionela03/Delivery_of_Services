@@ -1,7 +1,5 @@
 package com.example.delivery_of_services_application.services;
 
-import com.example.delivery_of_services_application.exceptions.AnnouncementAlreadyExistsException;
-import com.example.delivery_of_services_application.users.Announcement;
 import com.example.delivery_of_services_application.users.Chat;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
@@ -14,14 +12,14 @@ public class ChatService {
 
     public static void initChatDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("chatDatabase.db").toFile())
+                .filePath(getPathToFile("chat_Database2.db").toFile())
                 .openOrCreate("test", "test");
 
         chatRepository = database.getRepository(Chat.class);
     }
 
-    public static void initiateChat(String expeditor, String destinatar, String message, String status)  {
+    public static void initiateChat(String expeditor, String destinatar, String message, String status,String ad)  {
 
-        chatRepository.insert(new Chat(expeditor, destinatar,message,status));
+        chatRepository.insert(new Chat(expeditor, destinatar,message,status,ad));
     }
 }

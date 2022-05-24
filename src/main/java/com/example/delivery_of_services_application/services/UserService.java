@@ -1,5 +1,6 @@
 package com.example.delivery_of_services_application.services;
 
+import com.example.delivery_of_services_application.users.Announcement;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import com.example.delivery_of_services_application.exceptions.UsernameAlreadyExistsException;
@@ -10,6 +11,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 
+import static com.example.delivery_of_services_application.services.AnnouncementService.announcementRepository;
 import static com.example.delivery_of_services_application.services.FileSystemService.getPathToFile;
 
 public class UserService {
@@ -18,7 +20,7 @@ public class UserService {
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("DSA.db").toFile())
+                .filePath(getPathToFile("DeliveryOfServices2.db").toFile())
                 .openOrCreate("test", "test");
         userRepository = database.getRepository(User.class);
     }
@@ -101,6 +103,8 @@ public class UserService {
         }
         return false;
     }
+
+
 
 
 }
