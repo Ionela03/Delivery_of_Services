@@ -65,18 +65,24 @@ public class MedicalServicesPageController {
             }
 
     }
-    @FXML
-    public void sendRequestButtonOnAction()throws Exception{
+    public void sendRequestButtonOnAction(){
         String s= listView.getSelectionModel().getSelectedItem();
         System.out.println("-"+s+"-");
         String user=username.getText();
         for(Announcement ad: announcementRepository.find() )
             if(Objects.equals(ad.noAnnouncement,s)) {
-                for (Chat chat : chatRepository.find())
+                for (Chat chat : chatRepository.find()){
                     if (Objects.equals(ad.noAnnouncement, chat.ad) ) {
                         request.setText("Request already sent!!!");
                         return;
                     }
+                    if(Objects.equals(user, chat.expeditor)){
+                        request.setText("You already selected an announcement");
+                        return;
+                    }
+                }
+
+
 
                 ChatService.initiateChat(user, ad.provider, "", "0", ad.noAnnouncement);
                 request.setText("Request sent successfully");
@@ -86,6 +92,7 @@ public class MedicalServicesPageController {
             }
 
     }
+
 
 
 }
